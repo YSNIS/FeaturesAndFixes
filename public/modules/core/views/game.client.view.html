@@ -1,0 +1,48 @@
+<section id="/games">
+	{{name}}
+	{{developer}}
+	{{year}}
+	<button class="addIssueButton">Add Issue</button>
+	<div class="addIssueDropdown">
+		<form class="form-horizontal" role="form">
+		<div class="form-group">
+		    <label for="title" class="col-sm-2 control-label">Title</label>
+		    <div class="col-sm-10">
+		    	<input type="text" class="form-control" id="title" ng-model="title">
+			</div>
+		</div>
+		<div class="form-group">
+		    <label for="text" class="col-sm-2 control-label">Text</label>
+		    <div class="col-sm-10">
+		    	<textarea class="form-control" rows="3" id="text" ng-model="text"></textarea>
+		    </div>
+		</div>
+		<div class="form-group">
+			<label for="type" class="col-sm-2 control-label">Type</label>
+			<div class="col-sm-2">
+				<select class=" form-control" id="type" ng-model="type">
+				  <option>Feature</option>
+				  <option>Fix</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		    	<button type="submit" ng-click="addIssue()" class="btn btn-default">Submit</button>
+		    </div>
+		</div>
+		</form>
+	</div>
+	<div ng-repeat="issue in issues">
+		<span ng-click="upvoteIssue(issue)" class="glyphicon glyphicon-thumbs-up"></span>
+		<a href="#!/games/{{id}}/issues/{{issue._id}}">
+			{{issue.title}}
+		</a>
+		{{issue.text}}
+		{{issue.type}}
+		{{issue.upvotes}}
+		{{issue.dateCreated}}
+	</div>
+</section>
+
+<!-- title text type votes status date added -->

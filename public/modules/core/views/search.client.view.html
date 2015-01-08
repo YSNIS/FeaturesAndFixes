@@ -1,0 +1,9 @@
+<section id='/search'>
+	<br>
+	<br>
+	<br>
+	<p>Results:</p>
+	<div ng-repeat="result in results | orderBy:'name.toString()'">
+		<a href="#!/games/{{result._id}}">{{result.name}}</a>
+	</div>
+</section>

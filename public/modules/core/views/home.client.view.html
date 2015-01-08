@@ -1,0 +1,24 @@
+<section id="/home.html">
+	<table ng-table="tableParams" class="table">
+	    <th>Name</th>
+	    <th>Developer</th>
+	    <th>Year</th>
+	    <th># of Issues</th>
+	    <tr ng-repeat="game in games">
+	        <td data-title="'Name'">
+	        <a href="#!/games/{{game._id}}">
+	            {{game.name}}</a>
+	        </a>
+	        </td>
+	        <td data-title="'Developer'">
+	            {{game.developer}}
+	        </td>
+	        <td data-title="'Year'">
+	            {{game.year}}
+	        </td>
+	        <td data-title="'# of Issues'">
+	            {{game.numOfIssues}}
+	        </td>
+	    </tr>
+	</table>
+</section>

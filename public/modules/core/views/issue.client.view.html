@@ -1,0 +1,22 @@
+<section id="/issues">
+	{{issueText}}
+		<form class="form-horizontal" role="form">
+		<div class="form-group">
+		    <label for="title" class="col-sm-2 control-label">Text</label>
+		    <div class="col-sm-10">
+		    	<input type="text" class="form-control" id="title" ng-model="commentText">
+			</div>
+		</div>
+		<div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		    	<button type="submit" ng-click="addComment()" class="btn btn-default">Submit</button>
+		    </div>
+		</div>
+		</form>
+		<div ng-repeat="comment in comments | orderBy:upvotes">
+			<span ng-click="upvoteComment(comment)" class="glyphicon glyphicon-thumbs-up"></span>
+			{{comment.user}}
+			{{comment.text}}
+			{{comment.upvotes}}
+		</div>
+</section>

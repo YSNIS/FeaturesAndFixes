@@ -1,0 +1,35 @@
+@media (min-width: 992px) {
+	.nav-users {
+		position: fixed;
+	}
+}
+.remove-account-container {
+	display: inline-block;
+	position: relative;
+}
+.btn-remove-account {
+	top: 10px;
+	right: 10px;
+	position: absolute;
+}
+
+/*.addGame-div {
+	width: 400px;
+}
+*/
+.addGame-span {
+	width: 100px;
+}
+
+.addGame-input {
+	width: 250px;
+}
+
+/* Home Screen */
+.game-field {
+	float: left;
+	padding: 50px;
+	margin: 0px 1px;
+	border: 1px solid black;
+	display: inline-block;
+}
